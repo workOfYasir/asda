@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CarrerController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
@@ -67,4 +68,9 @@ Route::get('/product/showProduct', [ProductController::class, 'display'])->name(
 Route::get('/product/showProduct/delete/{id}', [ProductController::class, 'remove'])->name('remove');
 Route::get('/product/showProduct/edit/{id}', [ProductController::class, 'change'])->name('change');
 Route::post('/product/showProduct/updating', [ProductController::class, 'updating'])->name('updating');
+
+Route::get('/addJob', function () {
+    return view('backend.carrer.addJob');
+})->name('addJob');
+Route::post('/carrer/storeJob', [CarrerController::class, 'jobStore'])->name('job-store');
 });

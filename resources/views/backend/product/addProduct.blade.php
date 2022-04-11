@@ -6,7 +6,7 @@
     @endsection
 
 @section('subcontent')
-<form method="POST" action="{{route('stored')}}">
+<form method="POST" action="{{route('stored')}}"  enctype="multipart/form-data">
   @csrf
 <div class="intro-y flex items-center mt-8">
         <h2 class="text-lg font-medium mr-auto">Product Module</h2>
@@ -17,23 +17,37 @@
             <div class="intro-y box p-5">
                 <div>
                 <style>
-strong { 
+strong {
   font-weight: bold;
   color:red;
-  
+
 }
 </style>
 <!-- </head> -->
                     <label>Product Name</label>
                     <input type="text" class="input w-full border mt-2 @error('name') is-invalid @enderror" name="name" placeholder="Product Name">
-                    
+
                 @error('name')
                     <span class="invalid-feedback" role="alert">
                         <strong class="">{{ $message }}</strong>
                     </span>
                 @enderror
-                
-                <label>Category</label>
+
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id='myselect' multiple name="category_id[]">
+                        @foreach($category as $apple)
+                        <option value="{{$apple->id}}">{{$apple['category_name']}}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Choose Images</label>
+                    <input type="file"  name="images[]" multiple>
+                </div>
+
+                {{-- <label>Category</label>
                     <!-- <input type="text" class="input w-full border mt-2 @error('category_id') is-invalid @enderror" name="category_id" placeholder="category_id"> -->
                     <select class="input w-full border mt-2 @error('category_id') is-invalid @enderror" aria-label="Default select example" name="category_id" placeholder="category_id">
                         <option selected>Select Category</option>
@@ -50,7 +64,7 @@ strong {
                 @enderror
                 </div>
 
-                 <div>              
+                 <div>
                        <div class="mt-3">
                     <label>Unit</label>
                     <div class="relative mt-2">
@@ -102,13 +116,22 @@ strong {
                     </span>
                 @enderror
                     </div>
-                </div>
- 
+                </div> --}}
 
 
-               
+                <div id="dropzone">
+                    <form class="dropzone needsclick" id="demo-upload" action="" enctype="multipart/form-data">
+                    @csrf
+                      <div class="dz-message needsclick">
+                        Drop files here or click to upload.<br>
+                        <span class="note needsclick">(This is just a demo dropzone. Selected
+                        files are <strong>not</strong> actually uploaded.)</span>
+                      </div>
+                    </form>
+                  </div>
 
-                  
+
+
                 <div class="text-right mt-5">
                    <button type="submit" class="button w-24 bg-theme-1 text-white">Save</button>
                 </div>
@@ -116,6 +139,6 @@ strong {
 
             <!-- END: Form Layout -->
         </div>
-    </div> 
+    </div>
 </form>
 @endsection

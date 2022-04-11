@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
 use App\Http\Controllers\products;
-
+use App\Models\Image;
 use DB;
 
 class productController extends Controller
@@ -40,27 +40,28 @@ class productController extends Controller
 
     public function stored(Request $request)
     {
-
+        // dd($request->all());
         $this->validate($request, [
-
-
             'name'=>'required',
             'category_id'=>'required',
-            'unit_price'=>'required',
-            'quantity'=>'required'
-
-
         ]);
 
         $products = new Product;
         $products->name = $request->get('name');
-        $products->category_id = $request->get('category_id');
-        $products->unit = $request->get('unit');
-        $products->unit_name = $request->get('unit_name');
-        $products->unit_price = $request->get('unit_price');
-        $products->quantity = $request->get('quantity');
-
         $products->save();
+        $destinationPath=public_path('images/'.$request->name.$products->id);
+
+        foreach($request->file('images')as $item){
+            echo $item;
+            $imageName = rand(10,900).'.'.$item->extension();
+            $item->move($destinationPath, $imageName);
+            $image = new Image;
+            $image->product_id= $products->id;
+            $image->image= 'images/'.$request->name.$products->id.'/'.$imageName;
+            $image->save();
+        }
+
+        $products->category()->attach($request->category_id);
 
 
         return redirect()->route('display');
@@ -69,10 +70,26 @@ class productController extends Controller
     }
     public function display()
     {
-        $product = Product::with('category')->get();
+
+        $product = Product::with('category')->with('images')->get();
+
         return view('backend.product.showProduct',['product'=>$product]);
     }
 
+    /**
+     * Param categoryName
+     */
+    public function categoryProducts($catName)
+    {
+        $products = Product::whereHas(
+            'category', function($q){
+                $q->where('category_name', 'Commercial');
+            }
+        )->with('images')->get();
+
+
+        return $products;
+    }
 
     public function remove(Product $product,$id)
     {
