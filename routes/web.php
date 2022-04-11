@@ -1,11 +1,12 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PageController;
-use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,6 +35,12 @@ Route::get('/contacts', function () {
 });
 Route::get('/media', function () {
     return view('frontend.pages.media');
+});
+Route::get('/project/detail', function () {
+    return view('frontend.pages.project-detail');
+});
+Route::get('/projects', function () {
+    return view('frontend.pages.project-all');
 });
 
 
@@ -67,4 +74,9 @@ Route::get('/product/showProduct', [ProductController::class, 'display'])->name(
 Route::get('/product/showProduct/delete/{id}', [ProductController::class, 'remove'])->name('remove');
 Route::get('/product/showProduct/edit/{id}', [ProductController::class, 'change'])->name('change');
 Route::post('/product/showProduct/updating', [ProductController::class, 'updating'])->name('updating');
+});
+
+Route::get('/clear-cache', function() {
+    Artisan::call('cache:clear');
+    return "Cache is cleared";
 });
