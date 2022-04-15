@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
+use DB;
+use App\Models\Image;
+use App\Models\Career;
 use App\Models\Product;
 use App\Models\Category;
+use Illuminate\Http\Request;
 use App\Http\Controllers\products;
-
-use DB;
 
 class productController extends Controller
 {
@@ -36,43 +37,91 @@ class productController extends Controller
         $category=Category::all();
         return view('backend.product.addProduct',['category'=>$category]);
     }
+    public function detail($id)
+    {
 
+        $category = Category::with('product')->get();
+        $projects = Product::where('id',$id)->with('images')->get();
+        $careers = Career::all();
+       
+        return view('frontend.pages.project-detail',['projects'=>$projects,'category'=>$category,'careers'=>$careers]);
+        
+    }
+    public function storedImage(Request $request)
+    {
 
+        $image = $request->file('file');
+
+        $imageName = time().'.'.$image->extension('');
+      $image->move(public_path('images/temp-images'),$imageName);
+       $src = asset('images/temp-images/'.$imageName);
+        $filename = $_FILES['file']['name'];
+        $filesize = $_FILES['file']['size'];
+
+        return response()->json(["filename" => $imageName,"name" => $filename,"size" => $filesize,'src'=>$src]);
+    }
     public function stored(Request $request)
     {
 
         $this->validate($request, [
-
-
             'name'=>'required',
             'category_id'=>'required',
-            'unit_price'=>'required',
-            'quantity'=>'required'
-
-
         ]);
 
         $products = new Product;
         $products->name = $request->get('name');
-        $products->category_id = $request->get('category_id');
-        $products->unit = $request->get('unit');
-        $products->unit_name = $request->get('unit_name');
-        $products->unit_price = $request->get('unit_price');
-        $products->quantity = $request->get('quantity');
-
         $products->save();
+        $destinationPath=public_path('images/'.$request->name.$products->id);
+
+        foreach($request->file('images')as $item){
+            $imageName = rand(10,900).'.'.$item->extension();
+            $item->move($destinationPath, $imageName);
+            $image = new Image;
+            $image->product_id= $products->id;
+            $image->image= 'images/'.$request->name.$products->id.'/'.$imageName;
+            $image->save();
+        }
+
+        $products->category()->attach($request->category_id);
 
 
-        return redirect()->route('display');
+        return redirect()->back();
 
 
     }
     public function display()
     {
-        $product = Product::with('category')->get();
-        return view('backend.product.showProduct',['product'=>$product]);
+
+        $product = Product::with('category')->with('images')->get();
+        
+        $careers = Career::all();
+        return view('backend.product.showProduct',['product'=>$product,'careers'=>$careers]);
+    }
+    public function show()
+    {
+
+        $category = Category::with('product')->get();
+        
+        $project=Product::with('category')->get();
+   
+        $careers = Career::all();
+        return view('frontend.pages.project-all',['category'=>$category,'project'=>$project,'careers'=>$careers]);
     }
 
+    /**
+     * Param categoryName
+     */
+    public function categoryProducts($catName)
+    {
+        $products = Product::whereHas(
+            'category', function($q) use($catName){
+                $q->where('category_name', $catName);
+            }
+        )->with('images')->get();
+
+
+        return $products;
+    }
 
     public function remove(Product $product,$id)
     {

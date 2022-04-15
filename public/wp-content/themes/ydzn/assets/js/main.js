@@ -674,7 +674,7 @@ var tools = {
 			},
 			onError: function($form, msg) {
 
-				console.log(msg);
+				console.log('error: ',$form);
 
 				var th = forms;
 				modals.open($form.data('error-id'));
@@ -682,7 +682,7 @@ var tools = {
 			},
 			onSuccess: function($form, msg) {
 
-				console.log(msg);
+				console.log('success: ',msg);
 
 				var th = forms;
 

@@ -68,6 +68,27 @@
                             </li>
                         </ul>
                     </li>
+                    <li class=" my-6"></li>
+                    <li>
+                        <a href="javascript:;" class="side-menu {{(Request::routeIs('addJob')||Request::routeIs('display')) ? 'side-menu--active side-menu--open' : ''}}">
+                            <div class="side-menu__icon"> <i data-feather="edit"></i> </div>
+                            <div class="side-menu__title"> Carrer <i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
+                        </a>
+                        <ul class="{{(Request::routeIs('addJob')||Request::routeIs('display')) ? 'side-menu__sub-open' : ''}}">
+                            <li>
+                                <a href="{{route('addJob')}}" class="side-menu {{Request::routeIs('addJob') ? 'side-menu--active' : ''}}">
+                                    <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                    <div class="side-menu__title"> Add Job </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('display')}}" class="side-menu {{Request::routeIs('display') ? 'side-menu--active' : ''}}">
+                                    <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                    <div class="side-menu__title"> Show Product </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             <!-- END: Side Menu -->

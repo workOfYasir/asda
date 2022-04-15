@@ -48,11 +48,11 @@
                         @else
                         <th class="whitespace-no-wrap">ID</th>
                         <th class="whitespace-no-wrap">Category Name</th>
-                        <th class="text-center whitespace-no-wrap">Product Name</th>
+                        {{-- <th class="text-center whitespace-no-wrap">Product Name</th>
                         <th class="text-center whitespace-no-wrap">Unit</th>
                         <th class="text-center whitespace-no-wrap">Unit Name</th>
                         <th class="text-center whitespace-no-wrap">Unit Price</th>
-                        <th class="text-center whitespace-no-wrap">Quantity</th>
+                        <th class="text-center whitespace-no-wrap">Quantity</th> --}}
                         <!-- <th class="text-center whitespace-no-wrap">Flat</th>
                         <th class="text-center whitespace-no-wrap">Industry</th>
                         <th class="text-center whitespace-no-wrap">Shop</th>
@@ -62,7 +62,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                  
+
                     @foreach($product as $item)
                         <tr class="intro-x">
                             <td class="w-40">
@@ -71,9 +71,8 @@
                                 </div>
                             </td>
                             <td>
-                         
                                 <div>
-                                {{$item->category->category_name}}
+                                {{$item->category}}
                                 </div>
                             </td>
                             <td class="text-center">
@@ -81,30 +80,8 @@
                                 {{$item->name}}
                                 </div>
                             </td>
-                            <td class="w-40">
-                              
-                                <div>       
-                                {{$item->unit}}
-                                </div>
-                            </td>
-                            <td class="table-report__action w-56">
-                                
-                                <div>
-                                {{$item->unit_name}}
-                                </div>
-                            
-                            </td>
-                            <td class="text-center">
-                            <div>
-                                {{$item->unit_price}}
-                                </div>
-                            </td>
-                            <td class="text-center">
-                            <div>
-                                {{$item->quantity}}
-                                </div>
-                            </td>
-                            
+
+
                             <td class="table-report__action w-56">
                                  <div class="flex justify-center items-center">
                                     <a class="flex items-center mr-3" href="{{route('change',$item->id)}}"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
@@ -116,54 +93,7 @@
                 </tbody>
             </table>
         </div>
-        <!-- END: Data List -->
-        <!-- BEGIN: Pagination -->
-        {{-- <div class="intro-y col-span-12 flex flex-wrap sm:flex-row sm:flex-no-wrap items-center">
-            <ul class="pagination">
-                <li>
-                    <a class="pagination__link" href="">
-                        <i class="w-4 h-4" data-feather="chevrons-left"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="pagination__link" href="">
-                        <i class="w-4 h-4" data-feather="chevron-left"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="pagination__link" href="">...</a>
-                </li>
-                <li>
-                    <a class="pagination__link" href="">1</a>
-                </li>
-                <li>
-                    <a class="pagination__link pagination__link--active" href="">2</a>
-                </li>
-                <li>
-                    <a class="pagination__link" href="">3</a>
-                </li>
-                <li>
-                    <a class="pagination__link" href="">...</a>
-                </li>
-                <li>
-                    <a class="pagination__link" href="">
-                        <i class="w-4 h-4" data-feather="chevron-right"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="pagination__link" href="">
-                        <i class="w-4 h-4" data-feather="chevrons-right"></i>
-                    </a>
-                </li>
-            </ul>
-            <select class="w-20 input box mt-3 sm:mt-0">
-                <option>10</option>
-                <option>25</option>
-                <option>35</option>
-                <option>50</option>
-            </select>
-        </div> --}}
-        <!-- END: Pagination -->
+
     </div>
-  
+
 @endsection

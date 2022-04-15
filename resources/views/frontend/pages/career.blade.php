@@ -3,256 +3,91 @@
 @section('content')
 
 <div class="content">
-    <section class="about about_career" id="about" data-color-section="white"><div class="about__bg">
-        	<span data-split-letters-big>
-        		Career        	</span>
+    <section class="about about_career" id="about" data-color-section="white">
+        <div class="about__bg">
+            <span data-split-letters-big>
+                Career </span>
         </div>
         <div class="wrapper">
-            <h2 class="h2 about__h2"  data-split-letters="1000">
-                A big day to join our team            </h2>
+            <h2 class="h2 about__h2" data-split-letters="1000">
+                A big day to join our team </h2>
             <div class="text about__text">
                 <div class="text__column wow fadeInUp" data-wow-delay="1.3s">
                     <p>
-                        YODEZEEN is a great deal. It is a great deal for those who are mad in love with architectural and interior projects that are always a challenge. A challenge you would never want to skip. The cooperation with our studio is based on creative thinking, openness within our team, and never-ending growth.                    </p>
+                        YODEZEEN is a great deal. It is a great deal for those who are mad in love with architectural
+                        and interior projects that are always a challenge. A challenge you would never want to skip. The
+                        cooperation with our studio is based on creative thinking, openness within our team, and
+                        never-ending growth. </p>
                 </div>
                 <div class="text__column wow fadeInUp" data-wow-delay="1.6s">
                     <p>
-                        We are an award-winning, multifunctional architectural studio that is spread all over the world. Now more than 60 people enjoy creating with us in 4 offices in Kyiv, Miami, Moscow, and Los Angeles. We are actively expanding our team and are looking for the same enthusiasts, like us, to work on worldwide projects.                    </p>
+                        We are an award-winning, multifunctional architectural studio that is spread all over the world.
+                        Now more than 60 people enjoy creating with us in 4 offices in Kyiv, Miami, Moscow, and Los
+                        Angeles. We are actively expanding our team and are looking for the same enthusiasts, like us,
+                        to work on worldwide projects. </p>
                 </div>
             </div>
             <button class="button about__button" data-modal-open="vacancy" data-button="1300">
-						<span class="button__text">
-							Send request
-						</span>
-                <svg class="button__svg" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg"><rect class="button__shape" height="100%" width="100%"></rect></svg>
+                <span class="button__text">
+                    Send request
+                </span>
+                <svg class="button__svg" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="button__shape" height="100%" width="100%"></rect>
+                </svg>
             </button>
         </div>
     </section>
-    <section class="career career_for-career" data-color-section="white"><div class="wrapper career__wrapper">
+    <section class="career career_for-career" data-color-section="white">
+        <div class="wrapper career__wrapper">
             <div class="career__inner">
                 <div class="career__list">
-                                                                                                        <div class="card career__card wow fadeInUp" data-vacancy-requirements data-wow-delay="0s">
-                                        <button class="card__head" data-vacancy-requirements-btn>
-                                        <h4 class="card__vacancy">
-                                            Architect                                        </h4>
-                                        <div class="card__address">
-                                            Kyiv                                        </div>
-                                        </button>
-                                    <div class="card__body">
-                                        <div class="text card__text">
-                                            <p><strong>Hiring specification:</strong><br />
-<br />
-AutoCad or ArchiCad<br />
-A sense of our style<br />
-Higher education<br />
-Work experience of 2 years+<br />
-<br />
-<strong>Areas of responsibility:</strong><br />
-<br />
-Designing of architectural objects<br />
-Architectural space organization<br />
-Plan solutions development<br />
-Planning documentation preparing<br />
-Project administration at the development stage<br />
-Be able to create the one-off concepts<br />
-Working with Los Angeles projects</p>
-                                        </div>
-                                        <button class="card__button" data-modal-open="vacancy"
-                                                data-vacancy="architect" data-vacancy-text="Architect">
-                                            Send request
-                                        </button>
-                                    </div>
-                                </div>
-                                                            <div class="card career__card wow fadeInUp" data-vacancy-requirements data-wow-delay="0s">
-                                        <button class="card__head" data-vacancy-requirements-btn>
-                                        <h4 class="card__vacancy">
-                                            Designer                                        </h4>
-                                        <div class="card__address">
-                                            Kyiv                                        </div>
-                                        </button>
-                                    <div class="card__body">
-                                        <div class="text card__text">
-                                            <p><strong>Hiring specification:</strong><br />
-<br />
-A sense of our style<br />
-3Ds Max<br />
-Work experience of 2 years+<br />
-<br />
-<strong>Areas of responsibility:</strong><br />
-<br />
-Design project conceptual solution development<br />
-Photorealistic rendering of the design solution via 3Ds Max<br />
-Relying on exclusivity &#038; artistic identity</p>
-                                        </div>
-                                        <button class="card__button" data-modal-open="vacancy"
-                                                data-vacancy="designer" data-vacancy-text="Designer">
-                                            Send request
-                                        </button>
-                                    </div>
-                                </div>
-                                                            <div class="card career__card wow fadeInUp" data-vacancy-requirements data-wow-delay="0s">
-                                        <button class="card__head" data-vacancy-requirements-btn>
-                                        <h4 class="card__vacancy">
-                                            Project Manager                                        </h4>
-                                        <div class="card__address">
-                                            Kyiv                                        </div>
-                                        </button>
-                                    <div class="card__body">
-                                        <div class="text card__text">
-                                            <p><strong>Hiring specification:</strong><br />
-<br />
-Higher education + minimum of 5 years hands-on experience (maintenance of control on more than 5 projects simultaneously)<br />
-Basic command of English<br />
-CAD, SketchUP<br />
-<br />
-<strong>Areas of responsibility:</strong><br />
-<br />
-Control of the timing and quality of work in accordance with the approved plan<br />
-Communication with contracting, subcontracting, construction teams, customers, project managers<br />
-Test and measurements<br />
-Communication with builders.<br />
-Clarification and revision of drawings from Ukrainian and Italian contractors</p>
-                                        </div>
-                                        <button class="card__button" data-modal-open="vacancy"
-                                                data-vacancy="project-manager" data-vacancy-text="Project Manager">
-                                            Send request
-                                        </button>
-                                    </div>
-                                </div>
-                                                                                                                                                            <div class="card career__card wow fadeInUp" data-vacancy-requirements data-wow-delay="0.3s">
-                                        <button class="card__head" data-vacancy-requirements-btn>
-                                        <h4 class="card__vacancy">
-                                            Architect                                        </h4>
-                                        <div class="card__address">
-                                            Moscow                                        </div>
-                                        </button>
-                                    <div class="card__body">
-                                        <div class="text card__text">
-                                            <p><strong>Hiring specification:</strong><br />
-<br />
-AutoCad or ArchiCad<br />
-A sense of our style<br />
-Higher education<br />
-Work experience of 2 years+<br />
-<br />
-<strong>Areas of responsibility:</strong><br />
-<br />
-Designing of architectural objects<br />
-Architectural space organization<br />
-Plan solutions development<br />
-Planning documentation preparing<br />
-Project administration at the development stage<br />
-Be able to create the one-off concepts</p>
-                                        </div>
-                                        <button class="card__button" data-modal-open="vacancy"
-                                                data-vacancy="architect" data-vacancy-text="Architect">
-                                            Send request
-                                        </button>
-                                    </div>
-                                </div>
-                                                            <div class="card career__card wow fadeInUp" data-vacancy-requirements data-wow-delay="0.3s">
-                                        <button class="card__head" data-vacancy-requirements-btn>
-                                        <h4 class="card__vacancy">
-                                            Designer                                        </h4>
-                                        <div class="card__address">
-                                            Moscow                                        </div>
-                                        </button>
-                                    <div class="card__body">
-                                        <div class="text card__text">
-                                            <p><strong>Hiring specification:</strong><br />
-<br />
-A sense of our style<br />
-3Ds Max<br />
-Work experience of 2 years+<br />
-<br />
-<strong>Areas of responsibility:</strong><br />
-<br />
-Design project conceptual solution development<br />
-Photorealistic rendering of the design solution via 3Ds Max<br />
-Relying on exclusivity &#038; artistic identity</p>
-                                        </div>
-                                        <button class="card__button" data-modal-open="vacancy"
-                                                data-vacancy="designer" data-vacancy-text="Designer">
-                                            Send request
-                                        </button>
-                                    </div>
-                                </div>
-                                                            <div class="card career__card wow fadeInUp" data-vacancy-requirements data-wow-delay="0.3s">
-                                        <button class="card__head" data-vacancy-requirements-btn>
-                                        <h4 class="card__vacancy">
-                                            Interior finishing manager                                        </h4>
-                                        <div class="card__address">
-                                            Kyiv                                        </div>
-                                        </button>
-                                    <div class="card__body">
-                                        <div class="text card__text">
-                                            <p><strong>Hiring specification:</strong><br />
-<br />
-Competence in leading manufacturers<br />
-Knowledge of English<br />
-Higher education in technical fields<br />
-Experience in negotiating with contractors<br />
-<br />
-<strong>Areas of responsibility:</strong><br />
-<br />
-Forming a complete design specification<br />
-Estimation management<br />
-Coordination &#038; procurement of the materials<br />
-Working with Los Angeles projects</p>
-                                        </div>
-                                        <button class="card__button" data-modal-open="vacancy"
-                                                data-vacancy="interior-finishing-manager" data-vacancy-text="Interior finishing manager">
-                                            Send request
-                                        </button>
-                                    </div>
-                                </div>
-                                                                                                                                                            <div class="card career__card wow fadeInUp" data-vacancy-requirements data-wow-delay="0.6s">
-                                        <button class="card__head" data-vacancy-requirements-btn>
-                                        <h4 class="card__vacancy">
-                                            Architectural finishing manager                                        </h4>
-                                        <div class="card__address">
-                                            Kyiv                                        </div>
-                                        </button>
-                                    <div class="card__body">
-                                        <div class="text card__text">
-                                            <p><strong>Hiring specification:</strong><br />
-<br />
-Competence in leading manufacturers<br />
-Knowledge of English<br />
-Higher education in technical fields<br />
-Experience in negotiating with contractors<br />
-<br />
-<strong>Areas of responsibility:</strong><br />
-<br />
-Working with facade and window systems&#8217; contractors<br />
-Forming aggregate specifications<br />
-Estimation management</p>
-                                        </div>
-                                        <button class="card__button" data-modal-open="vacancy"
-                                                data-vacancy="architectural-finishing-manager" data-vacancy-text="Architectural finishing manager">
-                                            Send request
-                                        </button>
-                                    </div>
-                                </div>
-                                                                                        </div>
+                    @foreach($careers as $key => $career)
+                    <div class="card career__card wow fadeInUp" data-vacancy-requirements data-wow-delay="0s">
+                        <button class="card__head" data-vacancy-requirements-btn>
+                            <h4 class="card__vacancy">
+                                {{ $career->title }} </h4>
+                            <div class="card__address">
+                                {{ @$career->address }} </div>
+                        </button>
+                        <div class="card__body">
+                            <div class="text card__text">
+                                {{-- {!!html_entity_decode($text)!!} --}}
+                                {!!  html_entity_decode($career->description) !!} 
+                            </div>
+                            <button class="card__button" data-modal-open="vacancy" data-vacancy="{{ $career->title }}"
+                                data-vacancy-text="{{ $career->title }}">
+                                Send request
+                            </button>
+                        </div>
+                    </div>
+                    @endforeach
+                    
+                </div>
             </div>
         </div>
     </section>
 </div>
-<section class="footer"><div class="wrapper wrapper_large">
+<section class="footer">
+    <div class="wrapper wrapper_large">
         <div class="footer__inner" style="height: auto; padding-bottom: 38px;">
             <div class="footer__copyright wow fadeInUp" data-wow-delay>
-              <div>
-                    <a href="#" target="_blank" style="display: inline-block;vertical-align: top; margin-right: 20px;font-size: 10px;line-height: 16px;font-weight: 300;color: #888;text-transform: none;max-width: 500px;margin-top: 10px;">Privacy Notice</a>
+                <div>
+                    <a href="#" target="_blank"
+                        style="display: inline-block;vertical-align: top; margin-right: 20px;font-size: 10px;line-height: 16px;font-weight: 300;color: #888;text-transform: none;max-width: 500px;margin-top: 10px;">Privacy
+                        Notice</a>
                     <a href="#">Terms of use</a>
-              </div>
-              <div style="font-size: 10px;line-height: 16px;font-weight: 300;color: #888;text-transform: none;max-width: 500px;margin-top: 13px; margin-bottom: 13px;padding-right:40px;">
-                  Please, be informed, that the intellectual property rights to all the photos, designs and other materials on this Site belong to “Yodezeen” LLC. You may request permission to use them by contacting us at: <a href="mailto:privacy@yodezeen.com">privacy@yodezeen.com</a>
-              </div>
-              Copyright 2018. All RIGHTS RESERVED
+                </div>
+                <div
+                    style="font-size: 10px;line-height: 16px;font-weight: 300;color: #888;text-transform: none;max-width: 500px;margin-top: 13px; margin-bottom: 13px;padding-right:40px;">
+                    Please, be informed, that the intellectual property rights to all the photos, designs and other
+                    materials on this Site belong to “Yodezeen” LLC. You may request permission to use them by
+                    contacting us at: <a href="mailto:privacy@yodezeen.com">privacy@yodezeen.com</a>
+                </div>
+                Copyright 2018. All RIGHTS RESERVED
             </div>
-            <a href="https://techifir.com/" target="_blank" class="footer__developed wow fadeInUp" data-wow-delay="0.5s" style="vertical-align: bottom;">
-                Developed by 
+            <a href="https://techifir.com/" target="_blank" class="footer__developed wow fadeInUp" data-wow-delay="0.5s"
+                style="vertical-align: bottom;">
+                Developed by
                 <h3>Techifir</h3>
 
                 <svg style="margin-left:20px;display:none;position:relative;top:8px;" width="60" height="auto"
@@ -281,53 +116,62 @@ Estimation management</p>
         </div>
     </div>
 
-                            <div class="modal modal_video" data-modal="video-poster-1">
-                <div class="modal__outer">
-                    <div class="modal__overlay" data-modal-close></div>
-                    <div class="modal__inner">
-                        <div class="modal__content">
-                            <div class="video">
-                                <button class="modal__close" data-modal-close></button>
-                                <div class="custom-video video__custom-video">
-                                    <video class="custom-video__video" preload="metadata" data-custom-video>
-                                        <source src="{{ asset('wp-content/uploads/2021/09/State-of-art-Edition-Video_2.mp4') }}" type="video/mp4">
-                                    </video>
-                                    <div class="custom-video__controls">
-                                        <button class="custom-video__button">
-                                            <div class="custom-video__sign custom-video__sign_play">
-                                                <svg width="16" height="18" viewBox="0 0 16 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                    <g id="Canvas" fill="none">
-                                                    <g id="Vector">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M 14.4262 7.72468L 2.44832 0.177888C 2.09422 -0.0329294 1.65452 0.002194 1.32244 0.002194C -0.00589223 0.002194 4.2024e-07 1.02775 4.2024e-07 1.28757L 4.2024e-07 16.7124C 4.2024e-07 16.932 -0.00581474 17.9978 1.32244 17.9978C 1.65452 17.9978 2.0943 18.0328 2.44832 17.8221L 14.4262 10.2753C 15.4093 9.69034 15.2394 8.99997 15.2394 8.99997C 15.2394 8.99997 15.4094 8.3096 14.4262 7.72468Z" fill="white"/>
-                                                    </g>
-                                                    </g>
-                                                </svg>  
-                                            </div>
-                                            <div class="custom-video__sign custom-video__sign_pause">
-                                                <svg width="16" height="18" viewBox="0 0 16 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                    <g id="Canvas" fill="none">
-                                                    <g id="music-player-pause-lines">
-                                                    <g id="Pause">
-                                                    <g id="Vector">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M 4.84613 0L 1.38459 0C 0.619884 0 1.29846e-08 0.619962 1.29846e-08 1.38459L 1.29846e-08 16.6154C 1.29846e-08 17.3801 0.619884 18 1.38459 18L 4.84613 18C 5.61083 18 6.23071 17.3801 6.23071 16.6154L 6.23071 1.38459C 6.23064 0.619962 5.61075 0 4.84613 0ZM 13.8461 0L 10.3845 0C 9.61977 0 8.99988 0.619962 8.99988 1.38459L 8.99988 16.6154C 8.99988 17.3801 9.61977 18 10.3845 18L 13.8461 18C 14.6108 18 15.2307 17.3801 15.2307 16.6154L 15.2307 1.38459C 15.2308 0.619962 14.6108 0 13.8461 0Z" fill="white"/>
-                                                    </g>
-                                                    </g>
-                                                    </g>
-                                                    </g>
-                                                </svg>                                                          
-                                            </div>
-                                        </button>
-                                        <button class="custom-video__progress">
-                                            <canvas class="custom-video__canvas"></canvas>
-                                        </button>
+    <div class="modal modal_video" data-modal="video-poster-1">
+        <div class="modal__outer">
+            <div class="modal__overlay" data-modal-close></div>
+            <div class="modal__inner">
+                <div class="modal__content">
+                    <div class="video">
+                        <button class="modal__close" data-modal-close></button>
+                        <div class="custom-video video__custom-video">
+                            <video class="custom-video__video" preload="metadata" data-custom-video>
+                                <source src="{{ asset('wp-content/uploads/2021/09/State-of-art-Edition-Video_2.mp4') }}"
+                                    type="video/mp4">
+                            </video>
+                            <div class="custom-video__controls">
+                                <button class="custom-video__button">
+                                    <div class="custom-video__sign custom-video__sign_play">
+                                        <svg width="16" height="18" viewBox="0 0 16 18" version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="Canvas" fill="none">
+                                                <g id="Vector">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M 14.4262 7.72468L 2.44832 0.177888C 2.09422 -0.0329294 1.65452 0.002194 1.32244 0.002194C -0.00589223 0.002194 4.2024e-07 1.02775 4.2024e-07 1.28757L 4.2024e-07 16.7124C 4.2024e-07 16.932 -0.00581474 17.9978 1.32244 17.9978C 1.65452 17.9978 2.0943 18.0328 2.44832 17.8221L 14.4262 10.2753C 15.4093 9.69034 15.2394 8.99997 15.2394 8.99997C 15.2394 8.99997 15.4094 8.3096 14.4262 7.72468Z"
+                                                        fill="white" />
+                                                </g>
+                                            </g>
+                                        </svg>
                                     </div>
-                                </div>
+                                    <div class="custom-video__sign custom-video__sign_pause">
+                                        <svg width="16" height="18" viewBox="0 0 16 18" version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="Canvas" fill="none">
+                                                <g id="music-player-pause-lines">
+                                                    <g id="Pause">
+                                                        <g id="Vector">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M 4.84613 0L 1.38459 0C 0.619884 0 1.29846e-08 0.619962 1.29846e-08 1.38459L 1.29846e-08 16.6154C 1.29846e-08 17.3801 0.619884 18 1.38459 18L 4.84613 18C 5.61083 18 6.23071 17.3801 6.23071 16.6154L 6.23071 1.38459C 6.23064 0.619962 5.61075 0 4.84613 0ZM 13.8461 0L 10.3845 0C 9.61977 0 8.99988 0.619962 8.99988 1.38459L 8.99988 16.6154C 8.99988 17.3801 9.61977 18 10.3845 18L 13.8461 18C 14.6108 18 15.2307 17.3801 15.2307 16.6154L 15.2307 1.38459C 15.2308 0.619962 14.6108 0 13.8461 0Z"
+                                                                fill="white" />
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button class="custom-video__progress">
+                                    <canvas class="custom-video__canvas"></canvas>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-                    
+        </div>
+    </div>
+
     <div class="modal" data-modal="navigation">
         <div class="modal__outer">
             <div class="modal__overlay"></div>
@@ -335,9 +179,9 @@ Estimation management</p>
                 <div class="modal__content">
                     <div class="navigation">
                         <div class="navigation__bg">
-							<span data-split-letters-big="500" data-nav-bg>
-								Menu
-							</span>
+                            <span data-split-letters-big="500" data-nav-bg>
+                                Menu
+                            </span>
                         </div>
                         <div class="navigation__inner">
                             <div class="navigation__column">
@@ -345,98 +189,121 @@ Estimation management</p>
                                     <div class="contact__inner">
                                         <div class="contact__list">
                                             <div class="contact__row">
-                                                                                                    <div class="card contact__card">
-                                                        <h4 class="h4 card__h4">
-                                                            General Inquiries:
-                                                        </h4>
-                                                        <a href="mailto:info@yodezeen.com" class="card__info">
-                                                            info@yodezeen.com                                                        </a>
-                                                    </div>
-                                                                                                    <div class="card contact__card">
-                                                        <h4 class="h4 card__h4">
-                                                            PR&Collaborations:
-                                                        </h4>
-                                                        <a href="mailto:pr@yodezeen.com" class="card__info">
-                                                            pr@yodezeen.com                                                        </a>
-                                                    </div>
-                                                                                                    <div class="card contact__card">
-                                                        <h4 class="h4 card__h4">
-                                                            Careers:
-                                                        </h4>
-                                                        <a href="mailto:hr@yodezeen.com" class="card__info">
-                                                            hr@yodezeen.com                                                        </a>
-                                                    </div>
-                                                                                            </div>
+                                                <div class="card contact__card">
+                                                    <h4 class="h4 card__h4">
+                                                        General Inquiries:
+                                                    </h4>
+                                                    <a href="mailto:info@yodezeen.com" class="card__info">
+                                                        info@yodezeen.com </a>
+                                                </div>
+                                                <div class="card contact__card">
+                                                    <h4 class="h4 card__h4">
+                                                        PR&Collaborations:
+                                                    </h4>
+                                                    <a href="mailto:pr@yodezeen.com" class="card__info">
+                                                        pr@yodezeen.com </a>
+                                                </div>
+                                                <div class="card contact__card">
+                                                    <h4 class="h4 card__h4">
+                                                        Careers:
+                                                    </h4>
+                                                    <a href="mailto:hr@yodezeen.com" class="card__info">
+                                                        hr@yodezeen.com </a>
+                                                </div>
+                                            </div>
                                             <div class="contact__row">
-                                                                                            </div>
+                                            </div>
                                         </div>
                                         <div class="text contact__text">
                                             <p>
-                                                For each project the approach rests on a careful understanding of the space, or the site’s.
+                                                For each project the approach rests on a careful understanding of the
+                                                space, or the site’s.
                                             </p>
                                         </div>
-                                        <button class="button button_white contact__button" data-btn-in-nav data-modal-open="contact">
-														<span class="button__text">
-															Send request
-														</span>
-                                            <svg class="button__svg" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg"><rect class="button__shape" height="100%" width="100%"></rect></svg></button>
+                                        <button class="button button_white contact__button" data-btn-in-nav
+                                            data-modal-open="contact">
+                                            <span class="button__text">
+                                                Send request
+                                            </span>
+                                            <svg class="button__svg" height="100%" width="100%"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect class="button__shape" height="100%" width="100%"></rect>
+                                            </svg></button>
                                     </div>
                                 </div>
                             </div>
                             <div class="navigation__column">
                                 <div class="menu-panel navigation__menu-panel">
                                     <a href="../projects/index.html" class="menu-panel__item">
-													<span>
-														Projects
-													</span>
+                                        <span>
+                                            Projects
+                                        </span>
                                     </a>
                                     <a href="../about-us/index.html" class="menu-panel__item">
-													<span>
-														About
-													</span>
+                                        <span>
+                                            About
+                                        </span>
                                     </a>
                                     <a href="../media/index.html" class="menu-panel__item">
-													<span>
-														Media
-													</span>
+                                        <span>
+                                            Media
+                                        </span>
                                     </a>
                                     <a href="../blog/index.html" class="menu-panel__item">
-													<span>
-														Blog
-													</span>
+                                        <span>
+                                            Blog
+                                        </span>
                                     </a>
                                     <a href="index.html" class="menu-panel__item">
-													<span>
-														Careers
-													</span>
+                                        <span>
+                                            Careers
+                                        </span>
                                     </a>
                                     <a href="../contacts/index.html" class="menu-panel__item">
-													<span>
-														Contact
-													</span>
+                                        <span>
+                                            Contact
+                                        </span>
                                     </a>
                                 </div>
                                 <div class="search search_for-panel navigation__search">
                                     <form class="search__form" method="GET" action="https://yodezeen.com/search">
                                         <input type="text" class="search__input" name="request" placeholder="Search">
                                         <button class="search__button">
-                                            <svg class="search__svg" width="16" height="16" viewbox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><desc>Created using Figma</desc><g transform="translate(-303 731)"><g><use xlink:href="#path0_fill-1" transform="translate(303 -731)" fill="#FFFFFF"></use></g></g><defs><path id="path0_fill-1" d="M 6.22606 12.4521C 7.74461 12.4521 9.12511 11.9137 10.2019 11.0026L 15.0336 15.8343C 15.1441 15.9448 15.2821 16 15.434 16C 15.5858 16 15.7239 15.9448 15.8343 15.8343C 16.0552 15.6135 16.0552 15.2545 15.8343 15.0336L 11.0026 10.2019C 11.8999 9.12511 12.4521 7.7308 12.4521 6.22606C 12.4521 2.78861 9.6635 -9.80904e-16 6.22606 -9.80904e-16C 2.80242 -1.96181e-15 0 2.80242 0 6.22606C 0 9.6635 2.80242 12.4521 6.22606 12.4521ZM 6.22606 1.13201C 9.04228 1.13201 11.3201 3.42364 11.3201 6.22606C 11.3201 9.04228 9.04228 11.3201 6.22606 11.3201C 3.40984 11.3201 1.13201 9.02847 1.13201 6.22606C 1.13201 3.42364 3.42364 1.13201 6.22606 1.13201Z"></path></defs></svg></button>
+                                            <svg class="search__svg" width="16" height="16" viewbox="0 0 16 16"
+                                                version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <desc>Created using Figma</desc>
+                                                <g transform="translate(-303 731)">
+                                                    <g>
+                                                        <use xlink:href="#path0_fill-1" transform="translate(303 -731)"
+                                                            fill="#FFFFFF"></use>
+                                                    </g>
+                                                </g>
+                                                <defs>
+                                                    <path id="path0_fill-1"
+                                                        d="M 6.22606 12.4521C 7.74461 12.4521 9.12511 11.9137 10.2019 11.0026L 15.0336 15.8343C 15.1441 15.9448 15.2821 16 15.434 16C 15.5858 16 15.7239 15.9448 15.8343 15.8343C 16.0552 15.6135 16.0552 15.2545 15.8343 15.0336L 11.0026 10.2019C 11.8999 9.12511 12.4521 7.7308 12.4521 6.22606C 12.4521 2.78861 9.6635 -9.80904e-16 6.22606 -9.80904e-16C 2.80242 -1.96181e-15 0 2.80242 0 6.22606C 0 9.6635 2.80242 12.4521 6.22606 12.4521ZM 6.22606 1.13201C 9.04228 1.13201 11.3201 3.42364 11.3201 6.22606C 11.3201 9.04228 9.04228 11.3201 6.22606 11.3201C 3.40984 11.3201 1.13201 9.02847 1.13201 6.22606C 1.13201 3.42364 3.42364 1.13201 6.22606 1.13201Z">
+                                                    </path>
+                                                </defs>
+                                            </svg></button>
                                     </form>
                                 </div>
                                 <div class="share share_for-panel navigation__share">
-                                                                    <a href="https://www.behance.net/yodezeen" target="_blank" class="share__socnetwork">
+                                    <a href="https://www.behance.net/yodezeen" target="_blank"
+                                        class="share__socnetwork">
                                         <span class="share__icon socicon socicon-behance"></span>
                                     </a>
-                                                                    <a href="https://www.facebook.com/Yodezeen" target="_blank" class="share__socnetwork">
+                                    <a href="https://www.facebook.com/Yodezeen" target="_blank"
+                                        class="share__socnetwork">
                                         <span class="share__icon socicon socicon-facebook"></span>
                                     </a>
-                                                                    <a href="https://www.instagram.com/yodezeen_architects/" target="_blank" class="share__socnetwork">
+                                    <a href="https://www.instagram.com/yodezeen_architects/" target="_blank"
+                                        class="share__socnetwork">
                                         <span class="share__icon socicon socicon-instagram"></span>
                                     </a>
-                                                                    <a href="https://pinterest.com/yodezeen/" target="_blank" class="share__socnetwork">
+                                    <a href="https://pinterest.com/yodezeen/" target="_blank" class="share__socnetwork">
                                         <span class="share__icon socicon socicon-pinterest"></span>
                                     </a>
-                                                                </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -456,14 +323,17 @@ Estimation management</p>
                             We are waiting for you in our team!
                         </h2>
 
-                        <form action="https://yodezeen.com/api/subscribe" method="POST" data-success-id="thank" data-error-id="error" class="form request__form" data-form>
+                        <form action="{{ route('applied_job') }}" method="POST" data-success-id="thank"
+                            data-error-id="error" class="form request__form" data-form enctype="multipart/form-data">
+                            @csrf
                             <div class="form__row">
                                 <div class="form__column">
-
+                                    <input type="text" name="_token" id="csrf-token" value="{{ Session::token() }}">
                                     <div class="fieldset">
                                         <div class="label">Name</div>
                                         <div class="fieldset__focus">
-                                            <input type="text" name="username" data-field-name="username" class="input" data-required>
+                                            <input type="text" name="username" data-field-name="username" class="input"
+                                                data-required>
                                         </div>
                                         <div class="error">
                                             enter correct Name
@@ -473,7 +343,8 @@ Estimation management</p>
                                     <div class="fieldset">
                                         <div class="label">E-mail</div>
                                         <div class="fieldset__focus">
-                                            <input type="text" name="email" data-field-name="email" class="input" data-required>
+                                            <input type="text" name="email" data-field-name="email" class="input"
+                                                data-required>
                                         </div>
                                         <div class="error">
                                             enter correct E-mail
@@ -483,7 +354,8 @@ Estimation management</p>
                                     <div class="fieldset">
                                         <div class="label">Phone</div>
                                         <div class="fieldset__focus">
-                                            <input type="text" data-field-name="phone" name="phone" class="input" data-required>
+                                            <input type="text" data-field-name="phone" name="phone" class="input"
+                                                data-required>
                                         </div>
                                         <div class="error">
                                             enter correct Phone
@@ -497,28 +369,18 @@ Estimation management</p>
                                         <div class="label">Vacancy</div>
                                         <div class="custom-select" data-custom-select="vacancy">
                                             <select name="vacancy">
-                                                                                                    <option value="architect">
-                                                        Architect                                                    </option>
-                                                                                                    <option value="designer">
-                                                        Designer                                                    </option>
-                                                                                                    <option value="project-manager">
-                                                        Project Manager                                                    </option>
-                                                                                                    <option value="architect">
-                                                        Architect                                                    </option>
-                                                                                                    <option value="designer">
-                                                        Designer                                                    </option>
-                                                                                                    <option value="interior-finishing-manager">
-                                                        Interior finishing manager                                                    </option>
-                                                                                                    <option value="architectural-finishing-manager">
-                                                        Architectural finishing manager                                                    </option>
-                                                                                            </select>
+                                                @foreach($careers as $key => $career)
+                                                    <option value="{{ $career->id }}">{{ $career->title }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
 
                                     <div class="fieldset">
                                         <div class="label">Message</div>
                                         <div class="fieldset__focus">
-                                            <textarea type="text" name="message" data-field-name="message" class="input" data-required></textarea>
+                                            <textarea type="text" name="message" data-field-name="message" class="input"
+                                                data-required></textarea>
                                         </div>
                                         <div class="error">
                                             enter correct Message
@@ -533,7 +395,8 @@ Estimation management</p>
                                     <div class="fieldset fieldset_portfolio">
                                         <div class="label">Portfolio link</div>
                                         <div class="fieldset__focus">
-                                            <input type="text" name="portfolio" data-field-name="name" class="input" data-required>
+                                            <input type="text" name="portfolio" data-field-name="name" class="input"
+                                                data-required>
                                         </div>
                                         <div class="error">
                                             enter correct Link
@@ -545,23 +408,42 @@ Estimation management</p>
 
                                     <div class="upload" data-upload>
                                         <div class="upload__select">or upload a resume</div>
-                                        <input type="file" class="upload__input" data-field-name="file" name="file" onchange="uploadCtrl.getName(this.value);">
+                                        <input type="file" class="upload__input" data-field-name="file" name="file"
+                                            onchange="uploadCtrl.getName(this.value);">
                                     </div>
 
                                     <div class="result upload__result" data-result>
                                         <div class="result__icon">
-                                            <svg width="11" height="16" viewbox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><desc>Created using Figma</desc><g id="Canvas" transform="translate(310 6448)"><g id="Vector"><use xlink:href="#path01234_fill" transform="translate(-310 -6448)" fill="#828282"></use></g></g><defs><path id="path01234_fill" d="M 8.40281 0L 0.912482 0C 0.409546 0 1.64071e-08 0.440609 1.64071e-08 0.981213L 1.64071e-08 15.0187C 1.64071e-08 15.5601 0.409546 16 0.912482 16L 10.0875 16C 10.5908 16 11 15.5601 11 15.0187L 11 3.03398L 8.40281 0ZM 8.61818 1.46827L 9.75656 2.79839L 8.61818 2.79839L 8.61818 1.46827ZM 10.2336 15.0187C 10.2336 15.1051 10.1678 15.1761 10.087 15.1761L 0.912482 15.1761C 0.831837 15.1761 0.766405 15.1051 0.766405 15.0187L 0.766405 0.981213C 0.766405 0.89458 0.831837 0.82437 0.912482 0.82437L 7.8514 0.82437L 7.8514 3.21054C 7.8514 3.43773 8.02353 3.62191 8.23498 3.62191L 10.2336 3.62191L 10.2336 15.0187ZM 2.11835 4.38229L 8.62637 4.38229C 8.78491 4.38229 8.9135 4.52053 8.9135 4.69098C 8.9135 4.86142 8.78491 4.99967 8.62637 4.99967L 2.11835 4.99967C 1.95984 4.99967 1.83123 4.86142 1.83123 4.69098C 1.83123 4.52057 1.95984 4.38229 2.11835 4.38229ZM 8.9135 6.76537C 8.9135 6.93578 8.78491 7.07406 8.62637 7.07406L 2.11835 7.07406C 1.95984 7.07406 1.83123 6.93581 1.83123 6.76537C 1.83123 6.59492 1.95984 6.45668 2.11835 6.45668L 8.62637 6.45668C 8.78491 6.45668 8.9135 6.59496 8.9135 6.76537ZM 8.9135 8.77182C 8.9135 8.94227 8.78491 9.08051 8.62637 9.08051L 2.11835 9.08051C 1.95984 9.08051 1.83123 8.94227 1.83123 8.77182C 1.83123 8.60138 1.95984 8.46313 2.11835 8.46313L 8.62637 8.46313C 8.78491 8.46313 8.9135 8.60138 8.9135 8.77182ZM 8.9135 10.8124C 8.9135 10.9829 8.78491 11.1211 8.62637 11.1211L 2.11835 11.1211C 1.95984 11.1211 1.83123 10.9829 1.83123 10.8124C 1.83123 10.642 1.95984 10.5038 2.11835 10.5038L 8.62637 10.5038C 8.78491 10.5038 8.9135 10.642 8.9135 10.8124Z"></path></defs></svg>
+                                            <svg width="11" height="16" viewbox="0 0 11 16" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <desc>Created using Figma</desc>
+                                                <g id="Canvas" transform="translate(310 6448)">
+                                                    <g id="Vector">
+                                                        <use xlink:href="#path01234_fill"
+                                                            transform="translate(-310 -6448)" fill="#828282"></use>
+                                                    </g>
+                                                </g>
+                                                <defs>
+                                                    <path id="path01234_fill"
+                                                        d="M 8.40281 0L 0.912482 0C 0.409546 0 1.64071e-08 0.440609 1.64071e-08 0.981213L 1.64071e-08 15.0187C 1.64071e-08 15.5601 0.409546 16 0.912482 16L 10.0875 16C 10.5908 16 11 15.5601 11 15.0187L 11 3.03398L 8.40281 0ZM 8.61818 1.46827L 9.75656 2.79839L 8.61818 2.79839L 8.61818 1.46827ZM 10.2336 15.0187C 10.2336 15.1051 10.1678 15.1761 10.087 15.1761L 0.912482 15.1761C 0.831837 15.1761 0.766405 15.1051 0.766405 15.0187L 0.766405 0.981213C 0.766405 0.89458 0.831837 0.82437 0.912482 0.82437L 7.8514 0.82437L 7.8514 3.21054C 7.8514 3.43773 8.02353 3.62191 8.23498 3.62191L 10.2336 3.62191L 10.2336 15.0187ZM 2.11835 4.38229L 8.62637 4.38229C 8.78491 4.38229 8.9135 4.52053 8.9135 4.69098C 8.9135 4.86142 8.78491 4.99967 8.62637 4.99967L 2.11835 4.99967C 1.95984 4.99967 1.83123 4.86142 1.83123 4.69098C 1.83123 4.52057 1.95984 4.38229 2.11835 4.38229ZM 8.9135 6.76537C 8.9135 6.93578 8.78491 7.07406 8.62637 7.07406L 2.11835 7.07406C 1.95984 7.07406 1.83123 6.93581 1.83123 6.76537C 1.83123 6.59492 1.95984 6.45668 2.11835 6.45668L 8.62637 6.45668C 8.78491 6.45668 8.9135 6.59496 8.9135 6.76537ZM 8.9135 8.77182C 8.9135 8.94227 8.78491 9.08051 8.62637 9.08051L 2.11835 9.08051C 1.95984 9.08051 1.83123 8.94227 1.83123 8.77182C 1.83123 8.60138 1.95984 8.46313 2.11835 8.46313L 8.62637 8.46313C 8.78491 8.46313 8.9135 8.60138 8.9135 8.77182ZM 8.9135 10.8124C 8.9135 10.9829 8.78491 11.1211 8.62637 11.1211L 2.11835 11.1211C 1.95984 11.1211 1.83123 10.9829 1.83123 10.8124C 1.83123 10.642 1.95984 10.5038 2.11835 10.5038L 8.62637 10.5038C 8.78491 10.5038 8.9135 10.642 8.9135 10.8124Z">
+                                                    </path>
+                                                </defs>
+                                            </svg>
                                         </div>
                                         <div class="result__name" data-upload-filename></div>
                                         <button class="result__close" data-result-close></button>
                                     </div>
                                 </div>
                             </div>
-                            <button class="button button_active button_hover button_white form__button" data-button data-test>
-											<span class="button__text">
-												Send request
-											</span>
-                                <svg class="button__svg" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg"><rect class="button__shape" height="100%" width="100%"></rect></svg></button>
+                            <button class="button button_active button_hover button_white form__button" data-button
+                                data-test>
+                                <span class="button__text">
+                                    Send request
+                                </span>
+                                <svg class="button__svg" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="button__shape" height="100%" width="100%"></rect>
+                                </svg></button>
                         </form>
 
                     </div>
@@ -580,14 +462,17 @@ Estimation management</p>
                             Don't hesitate to contact us
                         </h2>
 
-                        <form action="https://yodezeen.com/api/subscribe" method="POST" data-success-id="thank" data-error-id="error" class="form request__form" data-form>
+                        <form action="{{ route('applied_job') }}" method="post" data-success-id="thank"
+                            data-error-id="error" class="form request__form" data-form enctype="multipart/form-data">
+                            @csrf
                             <div class="form__row">
                                 <div class="form__column">
-
+                                    <input type="text" name="_token" id="csrf-token" value="{{ Session::token() }}">
                                     <div class="fieldset">
                                         <div class="label">Name</div>
                                         <div class="fieldset__focus">
-                                            <input type="text" name="username" data-field-name="username" class="input" data-required>
+                                            <input type="text" name="username" data-field-name="username" class="input"
+                                                data-required>
                                         </div>
                                         <div class="error">
                                             enter correct Name
@@ -597,7 +482,8 @@ Estimation management</p>
                                     <div class="fieldset">
                                         <div class="label">E-mail</div>
                                         <div class="fieldset__focus">
-                                            <input type="text" name="email" data-field-name="email" class="input" data-required>
+                                            <input type="text" name="email" data-field-name="email" class="input"
+                                                data-required>
                                         </div>
                                         <div class="error">
                                             enter correct E-mail
@@ -607,7 +493,8 @@ Estimation management</p>
                                     <div class="fieldset">
                                         <div class="label">Phone</div>
                                         <div class="fieldset__focus">
-                                            <input type="text" data-field-name="phone" name="phone" class="input" data-required>
+                                            <input type="text" data-field-name="phone" name="phone" class="input"
+                                                data-required>
                                         </div>
                                         <div class="error">
                                             enter correct Phone
@@ -620,10 +507,11 @@ Estimation management</p>
                                     <div class="fieldset">
                                         <div class="label">Your city</div>
                                         <div class="custom-select" data-custom-select="city">
-                                            <select name="city"><option value="Kiev" selected>
-                                                    Kiev
+                                            <select name="city">
+                                                <option value="Lahore" selected>
+                                                    Lahore
                                                 </option>
-                                                <option value="Los-Angeles">
+                                                {{-- <option value="Los-Angeles">
                                                     Los Angeles
                                                 </option>
                                                 <option value="Miami">
@@ -631,17 +519,19 @@ Estimation management</p>
                                                 </option>
                                                 <option value="London">
                                                     London
-                                                </option>
+                                                </option> --}}
                                                 <!--<option value="Moscow">
                                                     Moscow
-                                                </option>--></select>
+                                                </option>-->
+                                            </select>
                                         </div>
                                     </div>
 
                                     <div class="fieldset">
                                         <div class="label">Message</div>
                                         <div class="fieldset__focus">
-                                            <textarea type="text" name="message" data-field-name="message" class="input" data-required></textarea>
+                                            <textarea type="text" name="message" data-field-name="message" class="input"
+                                                data-required></textarea>
                                         </div>
                                         <div class="error">
                                             enter correct Message
@@ -651,11 +541,15 @@ Estimation management</p>
                                 </div>
 
                             </div>
-                            <button class="button button_active button_hover button_white form__button form__button_margin" data-button>
-											<span class="button__text">
-												Send request
-											</span>
-                                <svg class="button__svg" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg"><rect class="button__shape" height="100%" width="100%"></rect></svg></button>
+                            <button
+                                class="button button_active button_hover button_white form__button form__button_margin"
+                                data-button>
+                                <span class="button__text">
+                                    Send request
+                                </span>
+                                <svg class="button__svg" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="button__shape" height="100%" width="100%"></rect>
+                                </svg></button>
                         </form>
 
                     </div>
@@ -673,9 +567,9 @@ Estimation management</p>
                         <button class="modal__close" data-modal-close></button>
                         <div class="thank__content">
                             <div class="thank__bg">
-											<span>
-												Error
-											</span>
+                                <span>
+                                    Error
+                                </span>
                             </div>
                             <h2 class="h2 thank__h2">
                                 Error!
@@ -699,9 +593,9 @@ Estimation management</p>
                         <button class="modal__close" data-modal-close></button>
                         <div class="thank__content">
                             <div class="thank__bg">
-											<span>
-												Thanks
-											</span>
+                                <span>
+                                    Thanks
+                                </span>
                             </div>
                             <h2 class="h2 thank__h2">
                                 Thanks you for your message!

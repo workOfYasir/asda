@@ -8,7 +8,7 @@
     <title>Design Studio YoDezeen. The best design solutions in any style.</title>
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="stylesheet" href="{{ asset('app.css') }}">
-
+    @stack('frontend_css')
     
     <link href='https://fonts.gstatic.com' rel='preconnect' crossorigin>
     <link href='https://www.google-analytics.com' rel='preconnect' crossorigin>
@@ -156,9 +156,8 @@
     <div class="wrapper wrapper_full header__wrapper">
         <div class="header__inner">
             <a data-cursor-hide href="/" class="logo header__logo">
-                <svg class="logo__svg" width="100%" height="100%" viewbox="0 0 234 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Canvas" fill="none"><g id="logotype"><g id="Group"><g id="Vector"><path fill-rule="evenodd" clip-rule="evenodd" d="M -1.52588e-06 53.6L 53.6 53.6L 53.6 3.05176e-06L -1.52588e-06 3.05176e-06L -1.52588e-06 53.6ZM 47.1 47.1L 30 47.1L 30 27.9L 47.1 8.3L 47.1 47.1ZM 39.7 6.5L 26.8 21.3L 13.9 6.5L 39.7 6.5ZM 6.5 8.3L 23.6 27.9L 23.6 47.1L 6.5 47.1L 6.5 8.3ZM 180.1 3.05176e-06L 180.1 53.6L 233.7 53.6L 233.7 3.05176e-06L 180.1 3.05176e-06L 180.1 3.05176e-06ZM 186.5 47.1L 186.5 8.3L 219.7 47.1L 186.5 47.1ZM 193.9 6.5L 227.1 6.5L 227.1 45L 193.9 6.5ZM 60 53.6L 113.6 53.6L 113.6 3.05176e-06L 60 3.05176e-06L 60 53.6ZM 107.1 6.5L 107.1 47.1L 73.8 47.1L 91.4 27.9L 73.8 6.4L 107.1 6.4L 107.1 6.5ZM 66.5 8.3L 82.7 27.9L 66.5 44.9L 66.5 8.3ZM 120 53.6L 173.6 53.6L 173.6 3.05176e-06L 120 3.05176e-06L 120 53.6ZM 167.1 47.1L 133.9 47.1L 167.1 8.3L 167.1 47.1ZM 126.5 6.5L 159.7 6.5L 126.5 45L 126.5 6.5Z" fill="#f7f7f7"></path></g></g></g></g></svg>
-                <svg class="logo__svg logo__svg_dark" width="100%" height="100%" viewbox="0 0 234 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Canvas" fill="none"><g id="logotype"><g id="Group"><g id="Vector"><path fill-rule="evenodd" clip-rule="evenodd" d="M -1.52588e-06 53.6L 53.6 53.6L 53.6 3.05176e-06L -1.52588e-06 3.05176e-06L -1.52588e-06 53.6ZM 47.1 47.1L 30 47.1L 30 27.9L 47.1 8.3L 47.1 47.1ZM 39.7 6.5L 26.8 21.3L 13.9 6.5L 39.7 6.5ZM 6.5 8.3L 23.6 27.9L 23.6 47.1L 6.5 47.1L 6.5 8.3ZM 180.1 3.05176e-06L 180.1 53.6L 233.7 53.6L 233.7 3.05176e-06L 180.1 3.05176e-06L 180.1 3.05176e-06ZM 186.5 47.1L 186.5 8.3L 219.7 47.1L 186.5 47.1ZM 193.9 6.5L 227.1 6.5L 227.1 45L 193.9 6.5ZM 60 53.6L 113.6 53.6L 113.6 3.05176e-06L 60 3.05176e-06L 60 53.6ZM 107.1 6.5L 107.1 47.1L 73.8 47.1L 91.4 27.9L 73.8 6.4L 107.1 6.4L 107.1 6.5ZM 66.5 8.3L 82.7 27.9L 66.5 44.9L 66.5 8.3ZM 120 53.6L 173.6 53.6L 173.6 3.05176e-06L 120 3.05176e-06L 120 53.6ZM 167.1 47.1L 133.9 47.1L 167.1 8.3L 167.1 47.1ZM 126.5 6.5L 159.7 6.5L 126.5 45L 126.5 6.5Z" fill="#1a1a1a"></path></g></g></g></g></svg>
-            </a>
+                <img src="{{ asset('images/logo-white.png') }}"  width="100" alt="">     
+                <img src="{{ asset('images/logo-dark.png') }}" class="logo__svg logo__svg_dark" width="100" alt="">           </a>
             <div class="header__container">
                 <button data-cursor-hide class="button-header header__button-header" data-nav-btn>
                     <span class="button-header__line"></span>
@@ -171,16 +170,14 @@
                             <span class="button-projects__line"></span>
                             <span class="button-projects__line"></span>
                         </button>
+                        {{ $categories =App\Models\Category::all(); }}
                         <div class="projects__dropdown" data-projects-dropdown>
-                            <a href="/projects#commercial" class="projects__subitem">
-                                Commercial
-                            </a>
-                            <a href="/projects#residential" class="projects__subitem">
-                                Residential
-                            </a>
-                            <a href="/projects#architecture" class="projects__subitem">
-                                Architecture
-                            </a>
+                        @foreach ($categories as $category)
+                        <a href="/projects#{{ $category->category_name }}" id="{{ $category->category_name }}" class="{{ $category->category_name }} projects__subitem">
+                            {{$category->category_name}}
+                        </a>
+                        @endforeach
+                        
                         </div>
                         <a href="/projects" class="projects__link ">
                             Projects

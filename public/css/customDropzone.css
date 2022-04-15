@@ -1,0 +1,41 @@
+.upload-area{
+    height: 100px;
+    border: 1px solid #e3e3e3;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.upload-area:hover{
+    cursor: pointer;
+}
+
+.upload-area p{
+    text-align: center;
+    font-weight: normal;
+    font-family: sans-serif;
+    line-height: 50px;
+    color: darkslategray;
+}
+
+#file{
+    display: none;
+}
+
+/* Thumbnail */
+.thumbnail{
+    width: 62px;
+    border: unset;
+}
+
+.size{
+    font-size:12px;
+    width:10px;
+    overflow: scroll;
+}
+#thumbnail_image{
+    width:50px
+}
+
+#wait{
+    margin: -13px;
+}

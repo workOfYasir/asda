@@ -4,11 +4,21 @@
 <script src="{{ asset('wp-content/themes/ydzn/assets/js/main.js') }}"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124906840-1"></script>
+
+
 <script>
+  // $(document).ready(function(){
+    var categoryProducts = '{{route("categoryProducts",":cat_name")}}'
+  // })
+  </script>
+  @stack('frontend_scripts')
+<script>
+
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'UA-124906840-1');
+
 </script>
 </body>
 </html>

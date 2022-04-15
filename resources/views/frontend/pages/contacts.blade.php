@@ -319,7 +319,7 @@
         </div>
     </div>
 
-    <div class="modal" data-modal="vacancy">
+<div class="modal" data-modal="vacancy">
         <div class="modal__outer">
             <div class="modal__overlay" data-modal-close></div>
             <div class="modal__inner">
@@ -330,14 +330,18 @@
                             We are waiting for you in our team!
                         </h2>
 
-                        <form action="https://yodezeen.com/api/subscribe" method="POST" data-success-id="thank" data-error-id="error" class="form request__form" data-form>
+                        <form action="{{ route('applied_job') }}" method="POST" data-success-id="thank" data-error-id="error"
+                            class="form request__form" data-form  enctype="multipart/form-data">
+                            @csrf
+                            
                             <div class="form__row">
                                 <div class="form__column">
 
                                     <div class="fieldset">
                                         <div class="label">Name</div>
                                         <div class="fieldset__focus">
-                                            <input type="text" name="username" data-field-name="username" class="input" data-required>
+                                            <input type="text" name="username" data-field-name="username" class="input"
+                                                data-required>
                                         </div>
                                         <div class="error">
                                             enter correct Name
@@ -347,7 +351,8 @@
                                     <div class="fieldset">
                                         <div class="label">E-mail</div>
                                         <div class="fieldset__focus">
-                                            <input type="text" name="email" data-field-name="email" class="input" data-required>
+                                            <input type="text" name="email" data-field-name="email" class="input"
+                                                data-required>
                                         </div>
                                         <div class="error">
                                             enter correct E-mail
@@ -357,7 +362,8 @@
                                     <div class="fieldset">
                                         <div class="label">Phone</div>
                                         <div class="fieldset__focus">
-                                            <input type="text" data-field-name="phone" name="phone" class="input" data-required>
+                                            <input type="text" data-field-name="phone" name="phone" class="input"
+                                                data-required>
                                         </div>
                                         <div class="error">
                                             enter correct Phone
@@ -371,28 +377,18 @@
                                         <div class="label">Vacancy</div>
                                         <div class="custom-select" data-custom-select="vacancy">
                                             <select name="vacancy">
-                                                                                                    <option value="architect">
-                                                        Architect                                                    </option>
-                                                                                                    <option value="designer">
-                                                        Designer                                                    </option>
-                                                                                                    <option value="project-manager">
-                                                        Project Manager                                                    </option>
-                                                                                                    <option value="architect">
-                                                        Architect                                                    </option>
-                                                                                                    <option value="designer">
-                                                        Designer                                                    </option>
-                                                                                                    <option value="interior-finishing-manager">
-                                                        Interior finishing manager                                                    </option>
-                                                                                                    <option value="architectural-finishing-manager">
-                                                        Architectural finishing manager                                                    </option>
-                                                                                            </select>
+                                                @foreach($careers as $key => $career)
+                                                    <option value="{{ $career->id }}">{{ $career->title }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
 
                                     <div class="fieldset">
                                         <div class="label">Message</div>
                                         <div class="fieldset__focus">
-                                            <textarea type="text" name="message" data-field-name="message" class="input" data-required></textarea>
+                                            <textarea type="text" name="message" data-field-name="message" class="input"
+                                                data-required></textarea>
                                         </div>
                                         <div class="error">
                                             enter correct Message
@@ -407,7 +403,8 @@
                                     <div class="fieldset fieldset_portfolio">
                                         <div class="label">Portfolio link</div>
                                         <div class="fieldset__focus">
-                                            <input type="text" name="portfolio" data-field-name="name" class="input" data-required>
+                                            <input type="text" name="portfolio" data-field-name="name" class="input"
+                                                data-required>
                                         </div>
                                         <div class="error">
                                             enter correct Link
@@ -419,23 +416,42 @@
 
                                     <div class="upload" data-upload>
                                         <div class="upload__select">or upload a resume</div>
-                                        <input type="file" class="upload__input" data-field-name="file" name="file" onchange="uploadCtrl.getName(this.value);">
+                                        <input type="file" class="upload__input" data-field-name="file" name="file"
+                                            onchange="uploadCtrl.getName(this.value);">
                                     </div>
 
                                     <div class="result upload__result" data-result>
                                         <div class="result__icon">
-                                            <svg width="11" height="16" viewbox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><desc>Created using Figma</desc><g id="Canvas" transform="translate(310 6448)"><g id="Vector"><use xlink:href="#path01234_fill" transform="translate(-310 -6448)" fill="#828282"></use></g></g><defs><path id="path01234_fill" d="M 8.40281 0L 0.912482 0C 0.409546 0 1.64071e-08 0.440609 1.64071e-08 0.981213L 1.64071e-08 15.0187C 1.64071e-08 15.5601 0.409546 16 0.912482 16L 10.0875 16C 10.5908 16 11 15.5601 11 15.0187L 11 3.03398L 8.40281 0ZM 8.61818 1.46827L 9.75656 2.79839L 8.61818 2.79839L 8.61818 1.46827ZM 10.2336 15.0187C 10.2336 15.1051 10.1678 15.1761 10.087 15.1761L 0.912482 15.1761C 0.831837 15.1761 0.766405 15.1051 0.766405 15.0187L 0.766405 0.981213C 0.766405 0.89458 0.831837 0.82437 0.912482 0.82437L 7.8514 0.82437L 7.8514 3.21054C 7.8514 3.43773 8.02353 3.62191 8.23498 3.62191L 10.2336 3.62191L 10.2336 15.0187ZM 2.11835 4.38229L 8.62637 4.38229C 8.78491 4.38229 8.9135 4.52053 8.9135 4.69098C 8.9135 4.86142 8.78491 4.99967 8.62637 4.99967L 2.11835 4.99967C 1.95984 4.99967 1.83123 4.86142 1.83123 4.69098C 1.83123 4.52057 1.95984 4.38229 2.11835 4.38229ZM 8.9135 6.76537C 8.9135 6.93578 8.78491 7.07406 8.62637 7.07406L 2.11835 7.07406C 1.95984 7.07406 1.83123 6.93581 1.83123 6.76537C 1.83123 6.59492 1.95984 6.45668 2.11835 6.45668L 8.62637 6.45668C 8.78491 6.45668 8.9135 6.59496 8.9135 6.76537ZM 8.9135 8.77182C 8.9135 8.94227 8.78491 9.08051 8.62637 9.08051L 2.11835 9.08051C 1.95984 9.08051 1.83123 8.94227 1.83123 8.77182C 1.83123 8.60138 1.95984 8.46313 2.11835 8.46313L 8.62637 8.46313C 8.78491 8.46313 8.9135 8.60138 8.9135 8.77182ZM 8.9135 10.8124C 8.9135 10.9829 8.78491 11.1211 8.62637 11.1211L 2.11835 11.1211C 1.95984 11.1211 1.83123 10.9829 1.83123 10.8124C 1.83123 10.642 1.95984 10.5038 2.11835 10.5038L 8.62637 10.5038C 8.78491 10.5038 8.9135 10.642 8.9135 10.8124Z"></path></defs></svg>
+                                            <svg width="11" height="16" viewbox="0 0 11 16" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <desc>Created using Figma</desc>
+                                                <g id="Canvas" transform="translate(310 6448)">
+                                                    <g id="Vector">
+                                                        <use xlink:href="#path01234_fill"
+                                                            transform="translate(-310 -6448)" fill="#828282"></use>
+                                                    </g>
+                                                </g>
+                                                <defs>
+                                                    <path id="path01234_fill"
+                                                        d="M 8.40281 0L 0.912482 0C 0.409546 0 1.64071e-08 0.440609 1.64071e-08 0.981213L 1.64071e-08 15.0187C 1.64071e-08 15.5601 0.409546 16 0.912482 16L 10.0875 16C 10.5908 16 11 15.5601 11 15.0187L 11 3.03398L 8.40281 0ZM 8.61818 1.46827L 9.75656 2.79839L 8.61818 2.79839L 8.61818 1.46827ZM 10.2336 15.0187C 10.2336 15.1051 10.1678 15.1761 10.087 15.1761L 0.912482 15.1761C 0.831837 15.1761 0.766405 15.1051 0.766405 15.0187L 0.766405 0.981213C 0.766405 0.89458 0.831837 0.82437 0.912482 0.82437L 7.8514 0.82437L 7.8514 3.21054C 7.8514 3.43773 8.02353 3.62191 8.23498 3.62191L 10.2336 3.62191L 10.2336 15.0187ZM 2.11835 4.38229L 8.62637 4.38229C 8.78491 4.38229 8.9135 4.52053 8.9135 4.69098C 8.9135 4.86142 8.78491 4.99967 8.62637 4.99967L 2.11835 4.99967C 1.95984 4.99967 1.83123 4.86142 1.83123 4.69098C 1.83123 4.52057 1.95984 4.38229 2.11835 4.38229ZM 8.9135 6.76537C 8.9135 6.93578 8.78491 7.07406 8.62637 7.07406L 2.11835 7.07406C 1.95984 7.07406 1.83123 6.93581 1.83123 6.76537C 1.83123 6.59492 1.95984 6.45668 2.11835 6.45668L 8.62637 6.45668C 8.78491 6.45668 8.9135 6.59496 8.9135 6.76537ZM 8.9135 8.77182C 8.9135 8.94227 8.78491 9.08051 8.62637 9.08051L 2.11835 9.08051C 1.95984 9.08051 1.83123 8.94227 1.83123 8.77182C 1.83123 8.60138 1.95984 8.46313 2.11835 8.46313L 8.62637 8.46313C 8.78491 8.46313 8.9135 8.60138 8.9135 8.77182ZM 8.9135 10.8124C 8.9135 10.9829 8.78491 11.1211 8.62637 11.1211L 2.11835 11.1211C 1.95984 11.1211 1.83123 10.9829 1.83123 10.8124C 1.83123 10.642 1.95984 10.5038 2.11835 10.5038L 8.62637 10.5038C 8.78491 10.5038 8.9135 10.642 8.9135 10.8124Z">
+                                                    </path>
+                                                </defs>
+                                            </svg>
                                         </div>
                                         <div class="result__name" data-upload-filename></div>
                                         <button class="result__close" data-result-close></button>
                                     </div>
                                 </div>
                             </div>
-                            <button class="button button_active button_hover button_white form__button" data-button data-test>
-											<span class="button__text">
-												Send request
-											</span>
-                                <svg class="button__svg" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg"><rect class="button__shape" height="100%" width="100%"></rect></svg></button>
+                            <button class="button button_active button_hover button_white form__button" data-button
+                                data-test>
+                                <span class="button__text">
+                                    Send request
+                                </span>
+                                <svg class="button__svg" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="button__shape" height="100%" width="100%"></rect>
+                                </svg></button>
                         </form>
 
                     </div>
@@ -454,14 +470,17 @@
                             Don't hesitate to contact us
                         </h2>
 
-                        <form action="https://yodezeen.com/api/subscribe" method="POST" data-success-id="thank" data-error-id="error" class="form request__form" data-form>
+                        <form action="{{ route('contact_us') }}" method="POST" data-success-id="thank" data-error-id="error"
+                            class="form request__form" data-form>
+                            @csrf
                             <div class="form__row">
                                 <div class="form__column">
 
                                     <div class="fieldset">
                                         <div class="label">Name</div>
                                         <div class="fieldset__focus">
-                                            <input type="text" name="username" data-field-name="username" class="input" data-required>
+                                            <input type="text" name="username" data-field-name="username" class="input"
+                                                data-required>
                                         </div>
                                         <div class="error">
                                             enter correct Name
@@ -471,7 +490,8 @@
                                     <div class="fieldset">
                                         <div class="label">E-mail</div>
                                         <div class="fieldset__focus">
-                                            <input type="text" name="email" data-field-name="email" class="input" data-required>
+                                            <input type="text" name="email" data-field-name="email" class="input"
+                                                data-required>
                                         </div>
                                         <div class="error">
                                             enter correct E-mail
@@ -481,7 +501,8 @@
                                     <div class="fieldset">
                                         <div class="label">Phone</div>
                                         <div class="fieldset__focus">
-                                            <input type="text" data-field-name="phone" name="phone" class="input" data-required>
+                                            <input type="text" data-field-name="phone" name="phone" class="input"
+                                                data-required>
                                         </div>
                                         <div class="error">
                                             enter correct Phone
@@ -494,28 +515,27 @@
                                     <div class="fieldset">
                                         <div class="label">Your city</div>
                                         <div class="custom-select" data-custom-select="city">
-                                            <select name="city"><option value="Kiev" selected>
-                                                    Kiev
+                                            <select name="city">
+                                               
+                                                <option value="Islamabad" >
+                                                    Islamabad
                                                 </option>
-                                                <option value="Los-Angeles">
-                                                    Los Angeles
+                                                <option value="Lahore" selected>
+                                                    Lahore
                                                 </option>
-                                                <option value="Miami">
-                                                    Miami
-                                                </option>
-                                                <option value="London">
-                                                    London
-                                                </option>
+                                                
                                                 <!--<option value="Moscow">
                                                     Moscow
-                                                </option>--></select>
+                                                </option>-->
+                                            </select>
                                         </div>
                                     </div>
 
                                     <div class="fieldset">
                                         <div class="label">Message</div>
                                         <div class="fieldset__focus">
-                                            <textarea type="text" name="message" data-field-name="message" class="input" data-required></textarea>
+                                            <textarea type="text" name="message" data-field-name="message" class="input"
+                                                data-required></textarea>
                                         </div>
                                         <div class="error">
                                             enter correct Message
@@ -525,11 +545,15 @@
                                 </div>
 
                             </div>
-                            <button class="button button_active button_hover button_white form__button form__button_margin" data-button>
-											<span class="button__text">
-												Send request
-											</span>
-                                <svg class="button__svg" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg"><rect class="button__shape" height="100%" width="100%"></rect></svg></button>
+                            <button
+                                class="button button_active button_hover button_white form__button form__button_margin"
+                                data-button>
+                                <span class="button__text">
+                                    Send request
+                                </span>
+                                <svg class="button__svg" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="button__shape" height="100%" width="100%"></rect>
+                                </svg></button>
                         </form>
 
                     </div>
